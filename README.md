@@ -28,6 +28,6 @@ Time Quantum - 2
 
 To run this project, clone the repository with the following code:
 
-git clone LRU_FIFO_vs_Round_Robin
-cd code
+git clone LRU_FIFO_vs_Round_Robin / 
+cd code / 
 python main.py
