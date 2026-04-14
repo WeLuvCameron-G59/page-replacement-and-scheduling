@@ -5,11 +5,11 @@ Cameron Bailey, Stephen Peden
 Efficient resource management is a critical function of operating systems. This project analyzes and compares the performance of two page replacement algorithms and one CPU scheduling algorithm.
 
 The goal is to evaluate how different algorithms handle:
-Memory management (page replacement)
+Memory management (page replacement) and 
 CPU scheduling (process execution)
 
 We focus on measuring efficiency using:
-Page faults (for memory algorithms)
+Page faults (for memory algorithms) and 
 Waiting time and turnaround time (for scheduling)
 
 Algorithms used in project:
