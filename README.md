@@ -1,7 +1,6 @@
 # FIFO & LRU vs. Round Robin
 Team members:
-Cameron Bailey
-Stephen Peden
+Cameron Bailey, Stephen Peden
 
 Efficient resource management is a critical function of operating systems. This project analyzes and compares the performance of two page replacement algorithms and one CPU scheduling algorithm.
 
