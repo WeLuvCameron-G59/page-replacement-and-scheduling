@@ -1,1 +1,82 @@
+This project evaluates the performance of two page replacement algorithms—First-In-First-Out (FIFO) and Least Recently Used (LRU)—and compares them with the Round Robin CPU scheduling algorithm. The study focuses on measuring efficiency using metrics such as page faults, waiting time, and turnaround time. Experimental results demonstrate the trade-offs between memory management and CPU scheduling strategies, highlighting how algorithm design impacts system performance.
+--------------------------
+Problem Definition
 
+Efficient resource management is a fundamental challenge in operating systems. Memory management algorithms such as FIFO and LRU determine which pages to replace when memory is full, while scheduling algorithms like Round Robin determine how CPU time is allocated among processes.
+
+The goal of this project is to
+
+Compare FIFO and LRU in terms of page fault frequency
+Evaluate Round Robin based on waiting time and turnaround time
+Analyze trade-offs between simplicity, fairness, and efficiency
+--------------------------
+Algorithm Explanations
+
+First-In-First-Out (FIFO):
+
+FIFO replaces the oldest page in memory when a new page needs to be loaded. It uses a queue-like structure where the first inserted page is the first removed.It's simple to implement, does not consider usage patterns, and can lead to inefficient replacements.
+
+Least Recently Used (LRU):
+
+LRU replaces the page that has not been used for the longest time. It assumes that recently used pages are more likely to be used again. It's more efficient than FIFO in most cases, requires tracking page usage, and higher overhead compared to FIFO.
+
+Round Robin Scheduling:
+
+Round Robin allocates CPU time in fixed time slices (quantum) and cycles through processes. It ensures fairness among processes, prevents starvation, and performance depends heavily on quantum size
+--------------------------
+Theoretical Complexity
+
+Algorithm	Time Complexity	Space Complexity
+FIFO = O(n)	 O(capacity)
+LRU =	O(n)	 O(capacity)
+Round Robin	= O(n × cycles)	 O(n)
+
+FIFO and LRU both iterate through page references, Round Robin depends on number of cycles required to complete all processes.
+--------------------------
+Experimental Design
+
+The experiments were conducted using Python implementations of each algorithm.
+
+Inputs Used:
+
+FIFO & LRU:
+Page reference string: [1, 2, 3, 1, 4, 5]
+Frame capacity: 3
+
+Round Robin:
+Processes: ["P1", "P2", "P3"]
+Burst times: [10, 5, 8]
+Time quantum: 2
+
+Metrics Measured:
+
+FIFO & LRU:
+Number of page faults
+
+Round Robin:
+Waiting time
+Turnaround time
+Average values for both
+--------------------------
+Results & Analysis
+
+Page Replacement Algorithms:
+FIFO produced a higher or equal number of page faults compared to LRU, LRU performed better by utilizing recent access patterns. LRU adapts to usage behavior, while FIFO blindly replaces pages, leading to inefficiencies.
+
+Round Robin Scheduling:
+Provided fair CPU allocation among all processes, it had average waiting time and turnaround time were moderate with smaller time quantum increased context switching overhead. Round Robin balances fairness and performance but requires careful tuning of the time quantum.
+
+Overall:
+
+FIFO: simplest but least efficient
+LRU: more efficient but slightly more complex
+Round Robin: ensures fairness but not directly comparable to page replacement algorithms
+--------------------------
+Conclusion
+
+The study demonstrates that algorithm choice significantly impacts system performance. LRU outperforms FIFO in minimizing page faults due to its awareness of usage patterns. Round Robin, while not directly comparable, provides an effective scheduling strategy that ensures fairness among processes. Future work could explore additional algorithms and larger datasets to further validate these findings.
+--------------------------
+7. References
+Class notes in CSC-2400
+Geek For Geeks - Page Replacement Algorithms in Operating Systems 
+Geek For Geeks - Round Robin Scheduling in Operating System
