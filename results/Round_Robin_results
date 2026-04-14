@@ -1,1 +1,12 @@
+This is the results for the Round Robin results as followed:
 
+What we gave the algorithm to work with:
+
+processes = ["P1", "P2", "P3"]
+burst_times = [10, 5, 8]
+quantum = 2
+
+Results:
+
+=== Round Robin ===
+{'waiting_times': [13, 10, 13], 'turnaround_times': [23, 15, 21], 'avg_waiting_time': 12.0, 'avg_turnaround_time': 19.666666666666668}
