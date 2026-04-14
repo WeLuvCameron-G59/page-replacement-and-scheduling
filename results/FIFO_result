@@ -1,1 +1,11 @@
+The rseult for the FIFO are as followed:
 
+What the algorithm worked with:
+
+pages = [1, 2, 3, 1, 4, 5]
+capacity = 3
+
+Result:
+
+=== FIFO ===
+{'page_faults': 5, 'final_frames': [4, 5, 3]}
