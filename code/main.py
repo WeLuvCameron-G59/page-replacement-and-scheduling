@@ -1,7 +1,5 @@
-# main.py
-
-from fifo import simulate_fifo
-from lru import simulate_lru
+from FIFO import simulate_fifo
+from LRU import simulate_lru
 from round_robin import round_robin
 
 
@@ -10,14 +8,10 @@ def test_page_algorithms():
     capacity = 3
 
     print("=== FIFO ===")
-    fifo_result = simulate_fifo(pages, capacity)
-    print("Page Faults:", fifo_result["page_faults"])
-    print("Final Frames:", fifo_result["final_frames"])
+    print(simulate_fifo(pages, capacity))
 
     print("\n=== LRU ===")
-    lru_result = simulate_lru(pages, capacity)
-    print("Page Faults:", lru_result["page_faults"])
-    print("Final Frames:", lru_result["final_frames"])
+    print(simulate_lru(pages, capacity))
 
 
 def test_round_robin():
@@ -26,12 +20,7 @@ def test_round_robin():
     quantum = 2
 
     print("\n=== Round Robin ===")
-    rr_result = round_robin(processes, burst_times, quantum)
-
-    print("Waiting Times:", rr_result["waiting_times"])
-    print("Turnaround Times:", rr_result["turnaround_times"])
-    print("Average Waiting Time:", rr_result["avg_waiting_time"])
-    print("Average Turnaround Time:", rr_result["avg_turnaround_time"])
+    print(round_robin(processes, burst_times, quantum))
 
 
 if __name__ == "__main__":
