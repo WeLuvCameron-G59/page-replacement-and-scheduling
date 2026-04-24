@@ -1,4 +1,4 @@
-# FIFO & LRU vs. Round Robin
+# page-replacement-and-scheduling
 Team members:
 Cameron Bailey, Bryant Peden
 
