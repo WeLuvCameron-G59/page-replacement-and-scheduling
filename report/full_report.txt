@@ -1,8 +1,0 @@
-For the report of the project, we have made good progress.
-We have implemented the code, got clean results back, and was able to explain it. 
-We have the beginning of the presentation done showing what the algorithms are but there will be more showing more and comparing and contrasting more.
-We want to also implement graphs or examples that show how the algorithms get the final answer to help explain it easier. 
-The only challenges were making sure everything was right and making sure we don't miss out. 
-Another one is making sure that the code actually works and can be altered to try out different inputs and get different and unique answers. 
-We want to continue giving the most amount of results and still being neat and tidy.
-(I have it like this so it's not all on one line)
